@@ -2,6 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+  .lines{
+    @apply h-1 w-7 bg-white rounded absolute;
+  }
+}
+.line-1{
+  top: 0;
+}
+.line-1.open{
+  animation: line1open 250ms ease forwards;
+}
+.line-1.close {
+  animation: line1close 250ms ease forwards;
+}
+.line-2{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.line-3{
+  bottom: 0;
+}
+.line-3.open{
+  animation: line3open 250ms ease forwards;
+}
+.line-3.close {
+  animation: line3close 250ms ease forwards;
+}
+@keyframes line1open {
+  0%{
+    top: 0;
+  }
+  100%{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@keyframes line1close {
+  0% {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes line3open {
+  0%{
+    bottom: 0%;
+  }
+  100%{
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+@keyframes line3close {
+  0% {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  100% {
+    bottom: 0%;
+  }
+}
 :root{
 
   --nav-height : 100px;
@@ -273,8 +337,6 @@ body{
     left: 75%;
   }
 }
-
-
 
 
 
