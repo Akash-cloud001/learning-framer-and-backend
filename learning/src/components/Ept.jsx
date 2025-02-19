@@ -8,8 +8,13 @@ const Ept = () => {
     target: targetRef
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", '-85%']);
-  const background = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], ["#8b5cf6", "#000000", "#000000", "#8b5cf6"])
+  const x = useTransform(scrollYProgress, [0, 1], ["130%", '-85%']);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.3, 1])
+  // const height = useTransform(scrollYProgress, [0,0.1, ["10%", '100vw']])
+  // const height = useTransform(scrollYProgress, [0,0.1, ["10%", '100vw']])
+  const borderRadius = useTransform(scrollYProgress, [0, 0.2], ["2000px", '0px']);
+  const top = useTransform(scrollYProgress, [0, 0.2], ["50%", "0%"]);
+  const background = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], ["#000 ", "#000", "#000", "#ef4444 "])
   return (
     <section className='section-container ept text-7xl ff-anton'>
       <article className="h-screen bg-red-500 w-full flex  flex-col items-center justify-between py-20">
@@ -18,18 +23,28 @@ const Ept = () => {
       </article>
 
       {/* scroll to view */}
-      <section ref={targetRef} className="bio-scroll-container bg-violet-500 relative h-[300vh] w-full">
-        <article className="sticky top-0 flex h-screen items-center overflow-hidden">
-          <motion.div style={{ background }} className='h-screen absolute top-0 left-0 w-full transition-colors duration-300 ease-in-out z-0'>
-
-          </motion.div>
-          <motion.div style={{ x, background }} className='flex gap-4 relative z-[1]'>
-            {cards.map((card) => {
-              return <Card card={card} key={card.id} />;
-            })}
+      <section ref={targetRef} className="bio-scroll-container bg-red-500 relative h-[500vh] w-full">
+        <article className="sticky top-0  h-screen w-full items-center overflow-hidden">
+          <motion.div style={{ background, top, scale, borderRadius, transformOrigin: "center center" }} className='absolute h-screen w-screen top-1/2 transition-all duration-300 ease-linear z-0 overflow-hidden flex items-center'>
+            <div className="word-container absolute left-1/2 -translate-x-1/2 z-0 flex flex-col items-center justify-center h-full text-[25vh] gap-10">
+              <span>B</span>
+              <span>I</span>
+              <span>O</span>
+            </div>
+            <motion.div style={{ x }} className='flex gap-4 relative z-10'>
+              {cards.map((card) => {
+                return <Card card={card} key={card.id} />;
+              })}
+            </motion.div>
           </motion.div>
         </article>
       </section>
+
+      <article className="h-screen bg-red-500 w-full flex  flex-col items-center justify-between py-20">
+        <img height={100} width={200} src="/down-arrow.png" alt="" className='rotate-180' />
+
+        <span>Lower</span>
+      </article>
     </section>
   )
 }
