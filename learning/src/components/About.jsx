@@ -6,22 +6,22 @@ import InfiniteMenu from './InfiniteMenu/InfiniteMenu'
 
 const items = [
   {
-    image: 'https://picsum.photos/300/300?grayscale',
+    image: 'https://picsum.photos/300/300',
     title: 'Item 1',
     description: 'This is pretty cool, right?'
   },
   {
-    image: 'https://picsum.photos/400/400?grayscale',
+    image: 'https://picsum.photos/400/400',
     title: 'Item 2',
     description: 'This is pretty cool, right?'
   },
   {
-    image: 'https://picsum.photos/500/500?grayscale',
+    image: 'https://picsum.photos/500/500',
     title: 'Item 3',
     description: 'This is pretty cool, right?'
   },
   {
-    image: 'https://picsum.photos/600/600?grayscale',
+    image: 'https://picsum.photos/600/600',
     title: 'Item 4',
     description: 'This is pretty cool, right?'
   }
@@ -48,23 +48,11 @@ const About = () => {
         />
       </div>
 
-      <div style={{ height: '600px', position: 'relative', width: '80%', }} className='mx-auto'>
+      <div style={{ height: '100vh', position: 'relative', width: '100%', }} className='mx-auto'>
         <InfiniteMenu items={items} />
       </div>
     </motion.div>
   )
 }
-const constraints = {
-  width: '100%',
-  height: '80%',
-  backgroundColor: "var(--hue-1-transparent)",
-  borderRadius: 10,
-}
 
-const box = {
-  width: 100,
-  height: 100,
-  backgroundColor: "#ff0088",
-  borderRadius: 10,
-}
 export default transition(About)

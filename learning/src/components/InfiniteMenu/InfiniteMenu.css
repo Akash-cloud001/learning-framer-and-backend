@@ -48,7 +48,8 @@
   
   .face-title {
     position: absolute;
-    top: 50%;
+    top: 10%;
+    left: 41.5%;
     transform: translate(20%, -50%);
   }
   
