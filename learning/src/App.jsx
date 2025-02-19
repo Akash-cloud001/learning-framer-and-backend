@@ -17,7 +17,7 @@ function App() {
             <Route path='/ept' element={<Ept />} />
           </Routes>
         </AnimatePresence>
-        <section className='fixed z-50 w-fit left-1/2 -translate-x-1/2 bottom-10'>
+        <section className='fixed z-50 w-fit right-8 sm:right-auto sm:left-1/2 sm:-translate-x-1/2 bottom-8 sm:bottom-10'>
         <FloatingDock />
         </section>
       </main>

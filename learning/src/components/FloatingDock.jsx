@@ -13,6 +13,7 @@ import Bio from './svgs/Bio'
 import Projects from './svgs/Projects'
 import Skills from './svgs/Skills'
 import Contact from './svgs/Contact'
+import MenuBar from './svgs/MenuBar'
 const items = [
     {
         title: "Home",
@@ -79,7 +80,7 @@ const FloatingDockMobile = ({ items, className }) => {
         onClick={() => setOpen(!open)}
         className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
       >
-        <div className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <MenuBar className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );
