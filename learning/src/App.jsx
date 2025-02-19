@@ -3,6 +3,7 @@ import {Routes, Route, useLocation} from 'react-router-dom';
 import { About, Cp, Enquire, Ept, Home, Registrations, Testimonials, Tournaments } from "./routes";
 import Navbar from './components/Navbar';
 import { AnimatePresence } from 'motion/react';
+import { FloatingDock } from './components/FloatingDock';
 function App() {
   const location = useLocation();
   return (
@@ -16,6 +17,9 @@ function App() {
             <Route path='/ept' element={<Ept />} />
           </Routes>
         </AnimatePresence>
+        <section className='fixed z-50 w-fit left-1/2 -translate-x-1/2 bottom-10'>
+        <FloatingDock />
+        </section>
       </main>
     </>
   )
