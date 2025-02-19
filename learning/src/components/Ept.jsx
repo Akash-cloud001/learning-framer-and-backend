@@ -8,25 +8,25 @@ const Ept = () => {
     target: targetRef
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ["130%", '-85%']);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [0.3, 1])
+  const x = useTransform(scrollYProgress, [0, 0.8], ["130%", '-120%']);
+  const scale = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0.3, 1, 1, 0.2])
   // const height = useTransform(scrollYProgress, [0,0.1, ["10%", '100vw']])
   // const height = useTransform(scrollYProgress, [0,0.1, ["10%", '100vw']])
-  const borderRadius = useTransform(scrollYProgress, [0, 0.2], ["2000px", '0px']);
-  const top = useTransform(scrollYProgress, [0, 0.2], ["50%", "0%"]);
-  const background = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], ["#000 ", "#000", "#000", "#ef4444 "])
+  const borderRadius = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], ["2000px", '0px', '0px', '1000px']);
+  const top = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], ["50%", "0%", "0%", "-50%"]);
+  // const background = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], ["#000 ", "#000", "#000", "#ef4444 "])
   return (
     <section className='section-container ept text-7xl ff-anton'>
-      <article className="h-screen bg-red-500 w-full flex  flex-col items-center justify-between py-20">
+      <article className="h-[80vh] bg-red-500 w-full flex  flex-col items-center justify-between py-20">
         <span>Upper</span>
         <img height={100} width={200} src="/down-arrow.png" alt="" />
       </article>
 
       {/* scroll to view */}
       <section ref={targetRef} className="bio-scroll-container bg-red-500 relative h-[500vh] w-full">
-        <article className="sticky top-0  h-screen w-full items-center overflow-hidden">
-          <motion.div style={{ background, top, scale, borderRadius, transformOrigin: "center center" }} className='absolute h-screen w-screen top-1/2 transition-all duration-300 ease-linear z-0 overflow-hidden flex items-center'>
-            <div className="word-container absolute left-1/2 -translate-x-1/2 z-0 flex flex-col items-center justify-center h-full text-[25vh] gap-10">
+        <article className="sticky top-0 h-screen w-full items-center overflow-hidden">
+          <motion.div style={{ top, scale, borderRadius, transformOrigin: "center center" }} className='bg-black absolute h-screen w-screen top-1/2 transition-all duration-300 ease-linear z-0 overflow-hidden flex items-center'>
+            <div className="word-container absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0 flex flex-col items-center justify-center h-full text-[20vh] sm:text-[25vh] gap-10">
               <span>B</span>
               <span>I</span>
               <span>O</span>
@@ -40,7 +40,7 @@ const Ept = () => {
         </article>
       </section>
 
-      <article className="h-screen bg-red-500 w-full flex  flex-col items-center justify-between py-20">
+      <article className="h-[80vh] bg-red-500 w-full flex  flex-col items-center justify-between py-20">
         <img height={100} width={200} src="/down-arrow.png" alt="" className='rotate-180' />
 
         <span>Lower</span>
