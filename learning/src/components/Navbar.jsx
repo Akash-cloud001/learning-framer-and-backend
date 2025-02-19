@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Link className='nav-link' to={'/about'}>About</Link>
             </div>
             <div className="nav-item">
-                <Link className='nav-link' to={'/ept'}>Elite Private Training</Link>
+                <Link className='nav-link' to={'/ept'}>EPT</Link>
             </div>
             <div className="hamburger-container h-[20px] w-7 relative" onClick={()=>setIsClick(!isClick)}>
             <div className={`lines line-1 ${isClick?'open':'close'}`}></div>
