@@ -31,7 +31,7 @@ const About = () => {
   const constraintsRef = useRef(null)
 
   return (
-    <motion.div ref={constraintsRef} style={constraints}>
+    <motion.div ref={constraintsRef}>
       {/* <motion.div
                 drag
                 dragConstraints={constraintsRef}
