@@ -3,11 +3,11 @@ import transition from '../transition'
 import { motion } from 'motion/react'
 import Orb from './Orb/Orb'
 import InfiniteMenu from './InfiniteMenu/InfiniteMenu'
-
+//catch put image revert and in 2 power 
 const items = [
   {
-    image: 'https://picsum.photos/300/300',
-    title: 'Item 1',
+    image: '/imgs/Adobe Express - file.png',
+    title: 'BOOTSTRAP',
     description: 'This is pretty cool, right?'
   },
   {
