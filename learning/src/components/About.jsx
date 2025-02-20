@@ -67,9 +67,21 @@ const About = () => {
           forceHoverState={false}
         />
       </div>
-
-      <div style={{ position: 'relative', }} className='mx-auto w-[90%] sm:w-full rounded-2xl overflow-hidden h-[85vh] md:h-screen'>
+      
+      <div className='flex items-center justify-start gap-3 pb-10 pl-10'>
+        <div className='flex items-center justify-center gap-1'>
+          <span className='h-1 w-1 rounded-full bg-white '></span>
+          <span className='h-1 w-1 rounded-full bg-white '></span>
+        </div>
+        <p>
+          [ SKILLS ]
+        </p>
+      </div>
+      <div style={{ position: 'relative', }} className='mx-auto w-[90%] sm:w-[95%]  rounded-2xl overflow-hidden h-[85vh] '>
         <InfiniteMenu items={items} />
+      </div>
+      <div className='h-10'>
+
       </div>
     </motion.div>
   )
