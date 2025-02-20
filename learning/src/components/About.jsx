@@ -6,25 +6,55 @@ import InfiniteMenu from './InfiniteMenu/InfiniteMenu'
 //catch put image revert and in 2 power 
 const items = [
   {
-    image: '/imgs/Adobe Express - file.png',
+    image: '/imgs/vscode.jpg',
+    title: 'VSCODE',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/html(1).jpg',
+    title: 'HTML',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/figma.jpg',
+    title: 'FIGMA',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/react.jpg',
+    title: 'REACT',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/vue.jpg',
+    title: 'VUE',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/js.jpg',
+    title: 'JAVA SCRIPT',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/tailwind.jpg',
+    title: 'TAILWIND',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/git.jpg',
+    title: 'GITHUB',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: '/imgs/bootstrap.jpg',
     title: 'BOOTSTRAP',
     description: 'This is pretty cool, right?'
   },
   {
-    image: 'https://picsum.photos/400/400',
-    title: 'Item 2',
+    image: '/imgs/redux.jpg',
+    title: 'REDUX TOOLKIT',
     description: 'This is pretty cool, right?'
   },
-  {
-    image: 'https://picsum.photos/500/500',
-    title: 'Item 3',
-    description: 'This is pretty cool, right?'
-  },
-  {
-    image: 'https://picsum.photos/600/600',
-    title: 'Item 4',
-    description: 'This is pretty cool, right?'
-  }
 
 ];
 const About = () => {
