@@ -8,52 +8,42 @@ const items = [
   {
     image: '/imgs/vscode.jpg',
     title: 'VSCODE',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/html(1).jpg',
     title: 'HTML',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/figma.jpg',
     title: 'FIGMA',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/react.jpg',
     title: 'REACT',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/vue.jpg',
     title: 'VUE',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/js.jpg',
     title: 'JAVA SCRIPT',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/tailwind.jpg',
     title: 'TAILWIND',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/git.jpg',
     title: 'GITHUB',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/bootstrap.jpg',
     title: 'BOOTSTRAP',
-    description: 'This is pretty cool, right?'
   },
   {
     image: '/imgs/redux.jpg',
     title: 'REDUX TOOLKIT',
-    description: 'This is pretty cool, right?'
   },
 
 ];
