@@ -42,8 +42,17 @@ const Ept = () => {
 
       <article className="h-[80vh] bg-red-500 w-full flex  flex-col items-center justify-between py-20">
         <img height={100} width={200} src="/down-arrow.png" alt="" className='rotate-180' />
-
         <span>Lower</span>
+      </article>
+
+      <article className='h-full w-full max-h-[500px] max-w-[500px] relative bg-black'>
+        <div class="relative fatfck">
+          <img src="/participation.svg" alt="participation img" />
+          <span>
+            <img src="/participation.svg" alt="participation img" />
+            <img src="/participation.svg" alt="participation img" />
+          </span>
+        </div>
       </article>
     </section>
   )
