@@ -33,11 +33,23 @@
     user-select: none;
     position: absolute;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 2rem;
     left: 1.6em;
     top: 50%;
   }
-  
+  .face-title {
+    position: absolute;
+    top: 25%;
+    width: max-content;
+    left: 50%;
+    transform: translate(20%, -50%);
+  }
+  @media screen and (min-width: 640px) {
+    .face-title{
+      font-size: 4rem;
+      top: 10%;
+    }
+  }
   .action-button-icon {
     user-select: none;
     position: relative;
@@ -46,12 +58,7 @@
     font-size: 26px;
   }
   
-  .face-title {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(20%, -50%);
-  }
+ 
   
   .face-title.active {
     opacity: 1;
@@ -111,8 +118,8 @@
     transition: 0.1s ease;
   }
   
-  @media (max-width: 1500px) {
+  /* @media (max-width: 1500px) {
     .face-title, .face-description {
       display: none;
     }
-  }
+  } */

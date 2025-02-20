@@ -78,7 +78,7 @@ const About = () => {
         />
       </div>
 
-      <div style={{ height: '100vh', position: 'relative', width: '100%', }} className='mx-auto'>
+      <div style={{ position: 'relative', }} className='mx-auto w-[90%] sm:w-full rounded-2xl overflow-hidden h-[85vh] md:h-screen'>
         <InfiniteMenu items={items} />
       </div>
     </motion.div>
