@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import transition from '../transition'
 import { useScroll, motion, useTransform } from 'motion/react';
-import logo from '../assets/react-bits-solid-black.svg';
+import Waves from './Waves/WavesLoader';
+import ImageToAscii from './ImageToAscii';
+import demo from '/demo.png'
 const Home = () => {
   const targetRef = useRef(null);
 
@@ -25,8 +27,29 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      <div style={{ width: '100%', height: '100vh', background: '#fff' }}>
-        
+      <div className='relative h-screen w-full z-50 overflow-hidden'>
+        <ImageToAscii imagePath={demo} outputWidth={50}/>
+        {/* <Waves lineColor="#000"
+
+          backgroundColor="rgba(255, 255, 255, 1)"
+
+          waveSpeedX={0.02}
+
+          waveSpeedY={0.01}
+
+          waveAmpX={40}
+
+          waveAmpY={20}
+
+          friction={0.9}
+
+          tension={0.01}
+
+          maxCursorMove={120}
+
+          xGap={12}
+
+          yGap={36} /> */}
       </div>
     </section>
   )
