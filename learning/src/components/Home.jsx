@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import transition from '../transition'
-import { useScroll,motion, useTransform } from 'motion/react';
+import { useScroll, motion, useTransform } from 'motion/react';
+import logo from '../assets/react-bits-solid-black.svg';
 const Home = () => {
   const targetRef = useRef(null);
 
@@ -9,7 +10,6 @@ const Home = () => {
     target: targetRef,
 
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", '-85%']);
   return (
     <section className='section-container home text-7xl ff-anton'>
@@ -25,9 +25,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      <section className='h-[50vh] bg-red-500'>
-        bottom section
-      </section>
+      <div style={{ width: '100%', height: '100vh', background: '#fff' }}>
+        
+      </div>
     </section>
   )
 }
