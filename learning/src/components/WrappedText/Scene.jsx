@@ -1,7 +1,7 @@
 import React, { useRef, useMemo } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Cylinder, MeshWobbleMaterial, Icosahedron } from  '@react-three/drei'
+import { OrbitControls, Cylinder, MeshWobbleMaterial, Icosahedron, Center } from '@react-three/drei'
 
 function ccccc(children, color) {
   const fontSize = 280
@@ -23,7 +23,7 @@ function ccccc(children, color) {
 
 }
 
-function TextRing({ children, direction=1,position=[0,0,0] }) {
+function TextRing({ children, direction = 1, position = [0, 0, 0] }) {
 
   const canvas = useMemo(() => {
     return ccccc(children, "white")
@@ -31,7 +31,7 @@ function TextRing({ children, direction=1,position=[0,0,0] }) {
 
   const texture = useRef()
   useFrame(({ clock }) => {
-    if(direction > 0)
+    if (direction > 0)
       texture.current.offset.x = clock.getElapsedTime() * 0.1
     else
       texture.current.offset.x = - clock.getElapsedTime() * 0.1
@@ -41,9 +41,8 @@ function TextRing({ children, direction=1,position=[0,0,0] }) {
 
   return (
     <group rotation-y={Math.PI / 4} scale={[1, 1, 1]} position={position}>
-
       <Cylinder args={cylArgs}>
-        <meshStandardMaterial attach="material"  side={THREE.DoubleSide} alphaTest={0.5}>
+        <meshStandardMaterial attach="material" side={THREE.DoubleSide} alphaTest={0.5}>
           <canvasTexture
             attach="map"
             repeat={[6, 1]}
@@ -62,14 +61,21 @@ function TextRing({ children, direction=1,position=[0,0,0] }) {
 
 function Scene() {
   return (
-    <Canvas className='h-full w-full' camera={{ position: [0, 1, 3], fov: 35 }}>
+    <Canvas className='h-full w-full' camera={{ position: [0, 0, 3], fov: 35 }}>
+      <Center>
+        <TextRing>
+          REACT NATIVE
+        </TextRing>
+        <TextRing position={[0, 0.25, 0]} direction={-1}>
+          TAILWIND
+        </TextRing>
+        <mesh>
+          <sphereGeometry args={[0.25, 64, 32]} />
+          <meshStandardMaterial wireframe />
+        </mesh>
+      </Center>
       <ambientLight intensity={2} />
-      <TextRing>
-        REACT NATIVE
-      </TextRing>
-      <TextRing position={[0, 0.5, 0]} direction={-1}>
-        TAILWIND 
-      </TextRing>
+
       <OrbitControls />
     </Canvas>
   )
