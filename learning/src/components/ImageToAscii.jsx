@@ -10,19 +10,20 @@ const ImageToAscii = ({ imagePath, outputWidth = 100 }) => {
     const convertToAscii = async () => {
       const img = new Image();
       img.src = imagePath;
-      await img.decode();
+      const decoded = await img.decode();
 
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
 
       const aspectRatio = img.height / img.width;
-      const outputHeight = Math.floor(outputWidth * aspectRatio * 0.55);
+      const outputHeight = Math.floor(outputWidth * aspectRatio * 1);
 
       canvas.width = outputWidth;
       canvas.height = outputHeight;
       ctx.drawImage(img, 0, 0, outputWidth, outputHeight);
 
       const imageData = ctx.getImageData(0, 0, outputWidth, outputHeight);
+      console.log(imageData, ' :: img')
       let asciiStr = "";
 
       for (let y = 0; y < outputHeight; y++) {
@@ -43,8 +44,8 @@ const ImageToAscii = ({ imagePath, outputWidth = 100 }) => {
       // Draw ASCII to canvas for PNG download
       const downloadCanvas = document.createElement("canvas");
       const downloadCtx = downloadCanvas.getContext("2d");
-      downloadCanvas.width = outputWidth * 8;
-      downloadCanvas.height = outputHeight * 12;
+      downloadCanvas.width = outputWidth * 6;
+      downloadCanvas.height = outputHeight * 11;
       downloadCtx.fillStyle = "white";
       downloadCtx.fillRect(0, 0, downloadCanvas.width, downloadCanvas.height);
       downloadCtx.fillStyle = "black";

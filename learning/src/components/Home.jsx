@@ -27,7 +27,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      <div className='relative h-screen w-full z-50 overflow-hidden'>
+      <div className='relative h-auto w-full z-50 overflow-hidden'>
         <ImageToAscii imagePath={demo} outputWidth={50}/>
         {/* <Waves lineColor="#000"
 
