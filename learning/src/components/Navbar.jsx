@@ -13,13 +13,16 @@ const Navbar = () => {
 
         <div className="nav-links flex items-center justify-center gap-10">
             <div className="nav-item">
-                <Link className='nav-link' to={'/'}>Home</Link>
+                <Link className='nav-link' to={'/'}>H</Link>
             </div>
             <div className="nav-item">
-                <Link className='nav-link' to={'/about'}>About</Link>
+                <Link className='nav-link' to={'/about'}>A</Link>
             </div>
             <div className="nav-item">
-                <Link className='nav-link' to={'/ept'}>EPT</Link>
+                <Link className='nav-link' to={'/ept'}>T</Link>
+            </div>
+            <div className="nav-item">
+                <Link className='nav-link' to={'/tournaments'}>E</Link>
             </div>
             <div className="hamburger-container h-[20px] w-7 relative" onClick={()=>setIsClick(!isClick)}>
             <div className={`lines line-1 ${isClick?'open':'close'}`}></div>

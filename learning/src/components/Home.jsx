@@ -1,6 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import transition from '../transition'
-import { useScroll,motion, useTransform } from 'motion/react';
+import { useScroll, motion, useTransform } from 'motion/react';
+import Waves from './Waves/WavesLoader';
+import ImageToAscii from './ImageToAscii';
+import demo from '/demo.png'
 const Home = () => {
   const targetRef = useRef(null);
 
@@ -9,7 +12,6 @@ const Home = () => {
     target: targetRef,
 
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", '-85%']);
   return (
     <section className='section-container home text-7xl ff-anton'>
@@ -25,9 +27,30 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      <section className='h-[50vh] bg-red-500'>
-        bottom section
-      </section>
+      <div className='relative h-auto w-full z-50 overflow-hidden'>
+        <ImageToAscii imagePath={demo} outputWidth={50}/>
+        {/* <Waves lineColor="#000"
+
+          backgroundColor="rgba(255, 255, 255, 1)"
+
+          waveSpeedX={0.02}
+
+          waveSpeedY={0.01}
+
+          waveAmpX={40}
+
+          waveAmpY={20}
+
+          friction={0.9}
+
+          tension={0.01}
+
+          maxCursorMove={120}
+
+          xGap={12}
+
+          yGap={36} /> */}
+      </div>
     </section>
   )
 }
